@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "spectator-mod",
+	"version": "${version}",
+	"name": "Spectator Mod",
+	"description": "This is a Spectator Mod made by Rife, Allowing People to Switch between survival and spectator mode.",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/spectator-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.rife.spectator.mod.SpectatorMod"
+		],
+		"client": [
+			"net.rife.spectator.mod.SpectatorModClient"
+		],
+		"fabric-datagen": [
+			"net.rife.spectator.mod.SpectatorModDataGenerator"
+		]
+	},
+	"mixins": [
+		"spectator-mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
